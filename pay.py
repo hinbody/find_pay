@@ -28,15 +28,18 @@ def calculate_salary():
   print 'At $' + str(hourly) + ' per hour, and ' + str(hours) + ' per week'
   print 'Yearly salary will be $' + str(salary)
 
-if sys.argv[1].lower() == 's':
-  try:
-    float(sys.argv[2])
-    calculate_hourly()
-  except:
-    print "usage: 'pay s floating_point_number'"
-elif sys.argv[1].lower() == 'h':
-  try:
-    float(sys.argv[2])
-  except:
-    print "usage: 'pay h floating_point_number'"
-  calculate_salary()
+try:
+  if sys.argv[1].lower() == 's':
+    try:
+      float(sys.argv[2])
+      calculate_hourly()
+    except:
+      print "usage: 'pay s floating_point_number'"
+  elif sys.argv[1].lower() == 'h':
+    try:
+      float(sys.argv[2])
+    except:
+      print "usage: 'pay h floating_point_number'"
+    calculate_salary()
+except:
+  print "usage: 'pay h floating_point_number'"
