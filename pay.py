@@ -41,5 +41,7 @@ try:
     except:
       print "usage: 'pay h floating_point_number'"
     calculate_salary()
+  else:
+    print "usage: 'pay  s/h floating_point_number'"
 except:
   print "usage: 'pay h floating_point_number'"
